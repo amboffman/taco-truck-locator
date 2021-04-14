@@ -1,1 +1,21 @@
 /* CUSTOM STYLES HERE */
+@media (max-width: 768px){
+    .navbar{
+        background-color: #444444;
+    }
+    .navbar a{
+        color: #fff;
+    }
+    #nav-text{
+        display: none;
+    }
+    .navbar .nav-link img{
+        filter: brightness(0);
+        filter:invert(1);
+    }
+
+    .navbar i{
+        display: inline;
+    }
+
+    }
