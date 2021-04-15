@@ -14,7 +14,7 @@
         <script type="text/javascript" src="scripts/scripts.js"></script>
     </head>
     <body>
-    <div class = "container-md" id="body">
+    <div class = "container body h-100">
             <nav class = "row-reverse align-items-center text-center navbar gx-5" >
                 <div class = "col-4 col-md">
                     <a class="nav-item float-md-right nav-link" href="#">
@@ -33,15 +33,193 @@
                     </div>
                 <div class = "col-4 col-md-auto">
                     <a class="nav-item nav-link active" href="#" aria-current="page">
-                        <img src="/assets/location-icon.png" alt="location-icon">
-                        <span class="d-none d-md-inline-block">Truck Locator</span>
+                        <div class="row justify-content-center align-items-end">
+                            <div class="col-1 p-0">
+                                <img src="/assets/location-icon.png" alt="location-icon">
+                            </div>
+                            <div class="col pl-2">
+                                <span class="d-none d-md-inline-block">Truck Locator</span>                            
+                            </div>
+                        </div>
                       </a>
                 </div>
             </nav>
-        <!-- DEMO -->
-        <!-- <div class="map-wrap">
-            <img class="map">
-        </div> -->
+
+        <div class = "container-fluid mt-5 d-none d-md-block">
+                    <h1>Found 3 Taco Trucks in 92121</h1>
+        </div>
+        <div class = "container-fluid mt-3" id="locations">
+            <div class="row h-100">
+                    <ul class="list-item col-12 col-md-6  mb-0 border overflow">
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="card shadow-sm  list-group-item mt-3">
+                                <div class="card-body pt-0">
+                                    <div class="row mt-3">
+                                        <div class="col-8">
+                                            <h5 class="card-title">Taco Truck 1</h5>
+                                        </div>
+                                        <div class="col-4 text-center">
+                                            <p>0.5 Miles</p>
+                                        </div>
+                                    </div>
+                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
+                                <p class="card-text hours">Open today until 9pm</p>
+                                <div class="container-fluid"> 
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">Directions</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="btn button">More Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                    </ul>
+                <div class="col align-items-center p-0  d-none d-md-block">
+                    <div class="map-placeholder container-fluid d-flex align-items-center h-100 justify-content-center">
+                            Click a location card to load a map
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  d-block d-md-none d-lg-none d-xl-none fixed-bottom footer-nav shadow-lg">
+            <div class="row">
+                <div class="col-6 p-0">
+                    <button type="button" style="height: 80px" class="btn btn-block active">List</button>
+                </div>
+                <div class="col-6 p-0">
+                    <button type="button" style="height: 80px" class="btn btn-block">Map</button>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     </body>
 </html>
