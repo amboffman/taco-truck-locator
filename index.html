@@ -1,225 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link href="/styles/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
-        <script type="text/javascript" src="scripts/scripts.js"></script>
-    </head>
-    <body>
-    <div class = "container body h-100">
-            <nav class = "row-reverse align-items-center text-center navbar gx-5" >
-                <div class = "col-4 col-md">
-                    <a class="nav-item float-md-right nav-link" href="#">
-                        <i class="fas fa-bars fa-1x d-md-none d-lg-none d-xl-none"></i>
-                <span class="d-none d-md-block">Menu</span>
-                      </a>
-                </div>
-                <div class = "col-4 col-md-8 order-md-first text-md-left">
-                    <a class="navbar-brand" href="#">
-                        <picture>
-                            <source media ="(max-width:768px)" srcset="/assets/rioseo-logo-mobile.png">
-                            <source media ="(min-width:769px)" srcset="/assets/rioseo-logo.png">
-                            <img src="/assets/rioseo-logo.png" alt="rioseo-logo">
-                        </picture>
-                      </a>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="/styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+    <div class="container body h-100 d-flex flex-column">
+        <nav class="row-reverse align-items-center text-center navbar gx-5">
+            <div class="col-4 col-md">
+                <a class="nav-item float-md-right nav-link" href="#">
+                    <i class="fas fa-bars fa-1x d-md-none d-lg-none d-xl-none"></i>
+                    <span class="d-none d-md-block">Menu</span>
+                </a>
+            </div>
+            <div class="col-4 col-md-8 order-md-first text-md-left">
+                <a class="navbar-brand" href="#">
+                    <picture>
+                        <source media="(max-width:768px)" srcset="/assets/rioseo-logo-mobile.png">
+                        <source media="(min-width:769px)" srcset="/assets/rioseo-logo.png">
+                        <img src="/assets/rioseo-logo.png" alt="rioseo-logo">
+                    </picture>
+                </a>
+            </div>
+            <div class="col-4 col-md-auto">
+                <a class="nav-item nav-link active" href="#" aria-current="page">
+                    <div class="row justify-content-center align-items-end">
+                        <div class="col-1 p-0">
+                            <img src="/assets/location-icon.png" alt="location-icon">
+                        </div>
+                        <div class="col pl-2">
+                            <span class="d-none d-md-inline-block">Truck Locator</span>
+                        </div>
                     </div>
-                <div class = "col-4 col-md-auto">
-                    <a class="nav-item nav-link active" href="#" aria-current="page">
-                        <div class="row justify-content-center align-items-end">
-                            <div class="col-1 p-0">
-                                <img src="/assets/location-icon.png" alt="location-icon">
-                            </div>
-                            <div class="col pl-2">
-                                <span class="d-none d-md-inline-block">Truck Locator</span>                            
+                </a>
+            </div>
+        </nav>
+
+        <div class="container-fluid mt-5 d-none d-md-block">
+            <h1>Found 3 Taco Trucks in 92121</h1>
+        </div>
+        <div class="containers m-0 flex-grow-md-1 d-flex" id="locations">
+                <ul class="list-item col-12 col-md-6  mb-0 border overflow" id="locations-list">
+                </ul>
+                <div class="col align-items-center p-0  d-none d-md-block map-wrap  flex-grow-1">
+                    <div class="map-placeholder flex-fill container-fluid d-flex align-items-center h-100 justify-content-center">
+                        Click a location card to load a map
+                    </div>
+                    <div class="container-fluid p-0 h-100 w-100">
+                        <img class="map">
+                    </div>
+
+                    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="container-fluid">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body container">
+                                    <div class="container-fluid p-0 mb-3" id="modal-hero">
+                                        <img class="card-img-top" src="http://via.placeholder.com/300x100"
+                                            alt="location image">
+                                    </div>
+                                    <h5 class="modal-title"></h5>
+                                    <span id="address"></span>
+                                    <div class="row mb-2">
+                                        <div class="col" id="number">
+                                            <img src="/assets/phone-icon.png">
+                                            <span class="info">111-111-1111</span>
+                                        </div>
+                                        <div class="col" id="directions">
+                                            <a href="#" target="_blank">
+                                                <img src="/assets/direction-icon.png">
+                                                <span class="info">Get Directions</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <table>
+                                                <tr id="monday">
+                                                    <td>Monday</td>
+                                                    <td id="monday-hours"></td>
+                                                </tr>
+                                                <tr id="tuesday">
+                                                    <td>Tuesday</td>
+                                                    <td id="tuesday-hours"></td>
+                                                </tr>
+                                                <tr id="wednesday">
+                                                    <td>Wednesday</td>
+                                                    <td id="wednesday-hours"></td>
+                                                </tr>
+                                                <tr id="thursday">
+                                                    <td>Thursday</td>
+                                                    <td id="thursday-hours"></td>
+                                                </tr>
+                                                <tr id="friday">
+                                                    <td>Friday</td>
+                                                    <td id="friday-hours"></td>
+                                                </tr>
+                                                <tr id="saturday">
+                                                    <td>Saturday</td>
+                                                    <td id="saturday-hours"></td>
+                                                </tr>
+                                                <tr id="sunday">
+                                                    <td>Sunday</td>
+                                                    <td id="sunday-hours"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" target="_blank" class="btn button">View Full Details</a>
+                                </div>
                             </div>
                         </div>
-                      </a>
-                </div>
-            </nav>
-
-        <div class = "container-fluid mt-5 d-none d-md-block">
-                    <h1>Found 3 Taco Trucks in 92121</h1>
-        </div>
-        <div class = "container-fluid mt-3" id="locations">
-            <div class="row h-100">
-                    <ul class="list-item col-12 col-md-6  mb-0 border overflow">
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                            <li class="card shadow-sm  list-group-item mt-3">
-                                <div class="card-body pt-0">
-                                    <div class="row mt-3">
-                                        <div class="col-8">
-                                            <h5 class="card-title">Taco Truck 1</h5>
-                                        </div>
-                                        <div class="col-4 text-center">
-                                            <p>0.5 Miles</p>
-                                        </div>
-                                    </div>
-                                <h6 class="card-subtitle mb-2 text-muted">1234 Claremont Mesa Blvd</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">San Diego, CA 92121</h6>
-                                <p class="card-text hours">Open today until 9pm</p>
-                                <div class="container-fluid"> 
-                                    <div class="row align-items-center justify-content-center">
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">Directions</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="#" class="btn button">More Info</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </li>
-                    </ul>
-                <div class="col align-items-center p-0  d-none d-md-block">
-                    <div class="map-placeholder container-fluid d-flex align-items-center h-100 justify-content-center">
-                            Click a location card to load a map
                     </div>
                 </div>
-            </div>
         </div>
-        <div class="container-fluid  d-block d-md-none d-lg-none d-xl-none fixed-bottom footer-nav shadow-lg">
-            <div class="row">
-                <div class="col-6 p-0">
-                    <button type="button" style="height: 80px" class="btn btn-block active">List</button>
-                </div>
-                <div class="col-6 p-0">
-                    <button type="button" style="height: 80px" class="btn btn-block">Map</button>
-                </div>
+    </div>
+    </div>
+    <div class="container-fluid  d-block d-md-none d-lg-none d-xl-none fixed-bottom footer-nav shadow-lg">
+        <div class="row">
+            <div class="col-6 p-0">
+                <button type="button" style="height: 80px" class="btn btn-block active" id="list">List</button>
             </div>
+            <div class="col-6 p-0">
+                <button type="button" style="height: 80px" class="btn btn-block" id="map">Map</button>
             </div>
         </div>
     </div>
-    </body>
+</body>
+
 </html>

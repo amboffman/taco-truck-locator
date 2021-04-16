@@ -1,4 +1,5 @@
 /* CUSTOM STYLES HERE */
+
 html, body {
     height: 100%;
   }
@@ -11,12 +12,25 @@ html, body {
    height: 100%;
     overflow-y: scroll;
 }
+.info{
+    color: #F9980D;
+}
 
+.modal, .modal-backdrop {
+    position: absolute !important;
+}
+
+#modalHero{
+    object-fit: fill;
+}
 .button{
     background-color: #444444;
     color: #fff;
     min-width: 100%;
     text-transform: uppercase;
+}
+.button:hover{
+    color: #fff;
 }
 
 .map-placeholder{
@@ -24,13 +38,28 @@ html, body {
     text-align: center;
     height: 100%;
 }
+.map-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.map{
+    width: 100%;
+    object-fit:fill;
+
+}
 .hours{
     color: #32a88c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #locations{
-    height: 50%;
+    height: 70%;
 }
 
+td{
+    padding-right: 20px;
+}
 .footer-nav button{
 height: 80px;
 background-color: #fff;
@@ -71,7 +100,10 @@ z-index: 1035;
         filter: brightness(0);
         filter:invert(1);
     }
-
+    .map{
+        width: 100%;
+        object-fit: fill;
+    }
     .navbar i{
         display: inline;
     }
@@ -82,3 +114,8 @@ z-index: 1035;
         height: 100%;
     }
     }
+    @media (min-width: 769px){
+        #locations-list, .map-wrap{
+            display: inline !important;
+        }
+        }
