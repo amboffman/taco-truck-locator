@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Taco Truck Locator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
@@ -22,7 +22,7 @@
 
 <body>
     <div class="container body h-100 d-flex flex-column">
-        <nav class="row-reverse align-items-center text-center navbar gx-5">
+        <nav class="row-reverse align-items-center text-center navbar">
             <div class="col-4 col-md">
                 <a class="nav-item float-md-right nav-link" href="#">
                     <i class="fas fa-bars fa-1x d-md-none d-lg-none d-xl-none"></i>
@@ -53,88 +53,89 @@
         </nav>
 
         <div class="container-fluid mt-5 d-none d-md-block">
-            <h1>Found 3 Taco Trucks in 92121</h1>
+            <h1>Found <span id="location-count">0</span> Taco Trucks<span id="zipcode"></span></h1>
         </div>
         <div class="containers m-0 flex-grow-md-1 d-flex" id="locations">
-                <ul class="list-item col-12 col-md-6  mb-0 border overflow" id="locations-list">
-                </ul>
-                <div class="col align-items-center p-0  d-none d-md-block map-wrap  flex-grow-1">
-                    <div class="map-placeholder flex-fill container-fluid d-flex align-items-center h-100 justify-content-center">
-                        Click a location card to load a map
-                    </div>
-                    <div class="container-fluid p-0 h-100 w-100">
-                        <img class="map">
-                    </div>
+            <ul class="list-item col-12 col-md-6  mb-0 border overflow" id="locations-list">
+            </ul>
+            <div class="col align-items-center p-0  d-none d-md-block map-wrap  flex-grow-1">
+                <div
+                    class="map-placeholder flex-fill container-fluid d-flex align-items-center h-100 justify-content-center">
+                    Click a location card to load a map
+                </div>
+                <div class="container-fluid p-0 h-100 w-100">
+                    <img class="map">
+                </div>
 
-                    <div class="modal" tabindex="-1" role="dialog" id="myModal">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="container-fluid">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="container-fluid">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <div class="container-fluid p-0 mb-3" id="modal-hero">
+                                    <img class="card-img-top" src="http://via.placeholder.com/300x100"
+                                        alt="location image">
                                 </div>
-                                <div class="modal-body container">
-                                    <div class="container-fluid p-0 mb-3" id="modal-hero">
-                                        <img class="card-img-top" src="http://via.placeholder.com/300x100"
-                                            alt="location image">
+                                <h5 class="modal-title"></h5>
+                                <span id="address"></span>
+                                <div class="row mb-2">
+                                    <div class="col" id="number">
+                                        <img src="/assets/phone-icon.png">
+                                        <span class="info">111-111-1111</span>
                                     </div>
-                                    <h5 class="modal-title"></h5>
-                                    <span id="address"></span>
-                                    <div class="row mb-2">
-                                        <div class="col" id="number">
-                                            <img src="/assets/phone-icon.png">
-                                            <span class="info">111-111-1111</span>
-                                        </div>
-                                        <div class="col" id="directions">
-                                            <a href="#" target="_blank">
-                                                <img src="/assets/direction-icon.png">
-                                                <span class="info">Get Directions</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <table>
-                                                <tr id="monday">
-                                                    <td>Monday</td>
-                                                    <td id="monday-hours"></td>
-                                                </tr>
-                                                <tr id="tuesday">
-                                                    <td>Tuesday</td>
-                                                    <td id="tuesday-hours"></td>
-                                                </tr>
-                                                <tr id="wednesday">
-                                                    <td>Wednesday</td>
-                                                    <td id="wednesday-hours"></td>
-                                                </tr>
-                                                <tr id="thursday">
-                                                    <td>Thursday</td>
-                                                    <td id="thursday-hours"></td>
-                                                </tr>
-                                                <tr id="friday">
-                                                    <td>Friday</td>
-                                                    <td id="friday-hours"></td>
-                                                </tr>
-                                                <tr id="saturday">
-                                                    <td>Saturday</td>
-                                                    <td id="saturday-hours"></td>
-                                                </tr>
-                                                <tr id="sunday">
-                                                    <td>Sunday</td>
-                                                    <td id="sunday-hours"></td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                    <div class="col" id="directions">
+                                        <a href="#" target="_blank">
+                                            <img src="/assets/direction-icon.png">
+                                            <span class="info">Get Directions</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <a href="#" target="_blank" class="btn button">View Full Details</a>
+                                <div class="row">
+                                    <div class="col">
+                                        <table>
+                                            <tr id="monday">
+                                                <td>Monday</td>
+                                                <td id="monday-hours"></td>
+                                            </tr>
+                                            <tr id="tuesday">
+                                                <td>Tuesday</td>
+                                                <td id="tuesday-hours"></td>
+                                            </tr>
+                                            <tr id="wednesday">
+                                                <td>Wednesday</td>
+                                                <td id="wednesday-hours"></td>
+                                            </tr>
+                                            <tr id="thursday">
+                                                <td>Thursday</td>
+                                                <td id="thursday-hours"></td>
+                                            </tr>
+                                            <tr id="friday">
+                                                <td>Friday</td>
+                                                <td id="friday-hours"></td>
+                                            </tr>
+                                            <tr id="saturday">
+                                                <td>Saturday</td>
+                                                <td id="saturday-hours"></td>
+                                            </tr>
+                                            <tr id="sunday">
+                                                <td>Sunday</td>
+                                                <td id="sunday-hours"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" target="_blank" class="btn button">View Full Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
     </div>
