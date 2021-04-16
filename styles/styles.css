@@ -79,7 +79,11 @@ z-index: 1035;
 .nav-link{
     color: #444444;
 }
-
+.list-group-item.active {
+    z-index: 2;
+    background-color: #eeee;
+    color: #444444
+}
 
 @media (max-width: 768px){
     .body{
