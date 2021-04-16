@@ -65,7 +65,7 @@ function addLocationCards(response){
             </div>
             <div class="row mb-3">
                 <div class="col">                                        
-                    <img src="/assets/phone-icon.png">
+                    <img src="assets/phone-icon.png">
                     <span class="info">111-111-1111</span>
                 </div>
             </div>
